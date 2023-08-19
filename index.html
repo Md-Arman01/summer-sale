@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summer Sale</title>
-</head>
-<body>
+    <!-- daisyUI and tailwind link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- lato font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet" />
+      <!-- lato font -->
+      <style>
+        .lato-font{
+          font-family: 'Lato', sans-serif;
+        }
+      </style>
+  </head>
+  <body class="lato-font">
     <header>
-
+      <section>
+        <div class="flex items-center justify-center h-[500px] bg-[#F9F6E2] ">
+          <div>
+            <div class="flex justify-center items-center gap-96">
+              <!-- banner content -->
+              <div class="text-center  space-y-10">
+                <p class="text-sm font-semibold text-[#111]">---SALE FEVER---</p>
+                <h1 class="text-5xl font-extrabold text-[#111] w-[500px] leading-[50px]">
+                  Purchase TK 200 or above & get <span class="text-[#E527B2]">20% off</span>
+                </h1>
+                <div class="flex justify-center items-center gap-4">
+                  <p class="text-sm font-semibold text-[#111">Use Promo Code</p>
+                  <button class="px-5 py-1 text-sm font-medium text-white rounded-md bg-[#E527B2]">SELL200</button>
+                </div>
+              </div>
+              <!-- banner img -->
+              <img
+                src="images/Summer 1.png"
+                class="max-w-sm" />
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
     <main>
-        
+      
     </main>
-</body>
+  </body>
 </html>
