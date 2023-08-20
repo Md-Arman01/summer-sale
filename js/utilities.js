@@ -43,6 +43,9 @@ function handleClick(target) {
       })
   }
 
+  document.getElementById('go-home-btn').addEventListener('click', function(){
+    window.document.location.href = "index.html";
+  })
 
   
 
