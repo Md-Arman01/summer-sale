@@ -10,17 +10,40 @@ function handleClick(target) {
     target.childNodes[7].childNodes[3].innerText.split(" ")[0];
   const itemPrice = parseFloat(itemPriceString);
   totalPrice = totalPrice + itemPrice;
+  const toDecimalTotalPrice = totalPrice.toFixed(2)
   const totalAmountDisplay = document.getElementById("total-amount-display");
-  totalAmountDisplay.innerText = totalPrice;
+  totalAmountDisplay.innerText = toDecimalTotalPrice;
+//   makePurchaseBtn unabled
   const makePurchaseBtn = document.getElementById("make-purchase-btn");
   if (totalPrice > 0) {
     makePurchaseBtn.removeAttribute("disabled");
   }
+  //   applyBtn unabled
   const applyBtn = document.getElementById("apply-btn");
   if(totalPrice >= 200){
     applyBtn.removeAttribute("disabled");
+    document.getElementById('apply-input-field').addEventListener('keyup', function(event){
+        const text = event.target.value;
+        document.getElementById("apply-btn").addEventListener('click', function(){
+            if(text === 'SELL200'){
+                const withOutDiscount = totalPrice;
+                const discountPercent = 20 / 100;
+                const withDiscount = totalPrice - (withOutDiscount * discountPercent);
+                const discountAmount = totalPrice - withDiscount;
+                const toDecimalDiscountPrice = discountAmount.toFixed(2)
+                const discountField = document.getElementById('discount');
+                discountField.innerText = toDecimalDiscountPrice;
+                const payTotalField = document.getElementById('payTotal');
+                const payTotalWithDiscount = toDecimalTotalPrice - toDecimalDiscountPrice;
+                const todecimalPayTotalWithDiscount = payTotalWithDiscount.toFixed(2)
+                payTotalField.innerText = todecimalPayTotalWithDiscount;
+            }
+        })
+        
+      })
   }
-  
+
+
   
 
 

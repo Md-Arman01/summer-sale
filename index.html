@@ -415,6 +415,7 @@
                 <h1 class="font-semibold text-base">Have coupon?</h1>
                 <label class="input-group">
                   <input
+                    id="apply-input-field"
                     type="text"
                     placeholder="Coupon code"
                     class="input input-bordered w-full" />
@@ -435,11 +436,11 @@
                   </h1>
                   <h1 class="font-semibold text-base text-gray-400">
                     <span class="text-[#111]">Discount:</span>
-                    <span class="text-gray-400">00</span>TK
+                    <span id="discount" class="text-gray-400">00</span>TK
                   </h1>
                   <h1 class="font-semibold text-base text-gray-400">
                     <span class="text-[#111]">Total:</span>
-                    <span class="text-gray-400" id="totalAmount">00</span>TK
+                    <span id="payTotal" class="text-gray-400" id="totalAmount">00</span>TK
                   </h1>
                 </div>
                 <hr />
@@ -469,6 +470,5 @@
       </section>
     </main>
     <script src="js/utilities.js"></script>
-    <script src="js/index.js"></script>
   </body>
 </html>
