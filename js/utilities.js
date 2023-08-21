@@ -13,6 +13,10 @@ function handleClick(target) {
   const toDecimalTotalPrice = totalPrice.toFixed(2)
   const totalAmountDisplay = document.getElementById("total-amount-display");
   totalAmountDisplay.innerText = toDecimalTotalPrice;
+
+  const payTotalField = document.getElementById('payTotal');
+  payTotalField.innerText = toDecimalTotalPrice;
+  
 //   makePurchaseBtn unabled
   const makePurchaseBtn = document.getElementById("make-purchase-btn");
   if (totalPrice > 0) {
@@ -35,8 +39,8 @@ function handleClick(target) {
                 discountField.innerText = toDecimalDiscountPrice;
                 const payTotalField = document.getElementById('payTotal');
                 const payTotalWithDiscount = toDecimalTotalPrice - toDecimalDiscountPrice;
-                const todecimalPayTotalWithDiscount = payTotalWithDiscount.toFixed(2)
-                payTotalField.innerText = todecimalPayTotalWithDiscount;
+                const toDecimalPayTotalWithDiscount = payTotalWithDiscount.toFixed(2)
+                payTotalField.innerText = toDecimalPayTotalWithDiscount;
             }
         })
         
